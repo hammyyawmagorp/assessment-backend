@@ -15,4 +15,14 @@ const { getFortune } = require('./controller')
 
 app.get("/api/fortune", getFortune);
 
+const { coinFlip } = require('./controller')
+
+app.get("/api/coinflip", coinFlip);
+
+const { motivation } = require('./controller')
+
+app.get("/api/motivation", motivationBtn);
+
+
 app.listen(4000, () => console.log("Server running on 4000"));
+

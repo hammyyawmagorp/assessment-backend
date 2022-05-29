@@ -16,5 +16,25 @@ module.exports = {
         let randomFortune = fortunes[randomFort];
       
         res.status(200).send(randomFortune);
-    }
-}  
+    },
+
+    coinFlip: (req, res) => {
+        const headstails = ["Heads", "Tails"];
+      
+        let randomHT = Math.floor(Math.random() * headstails.length);
+        let randomFlip = headstails[randomHT];
+      
+        res.status(200).send(randomFlip);
+},
+
+    motivationBtn: (req, res) => {
+        const motivate = ["You got this!", "It'll be Friday before you know it!", "Pain is temporary", "Be the best you, you can be!"];
+      
+        let motivationalPhrase = Math.floor(Math.random() * motivate.length);
+        let randomMotivation = motivate[motivationalPhrase];
+      
+        res.status(200).send(randomFlip);
+},
+
+
+}
