@@ -19,8 +19,18 @@ const { coinFlip } = require('./controller')
 
 app.get("/api/coinflip", coinFlip);
 
-const { motivation } = require('./controller')
+const { motivationBtn } = require('./controller')
 
 app.get("/api/motivation", motivationBtn);
+
+const { goalBtn } = require('./controller')
+
+app.post("/api/goal", goalBtn);
+
+// app.post('/api/goal', (req, res) => {
+//     console.log(req.body) 
+
+//     res.status(200).send('Nice Goals!')
+//   })
 
 app.listen(4000, () => console.log("Server running on 4000"));

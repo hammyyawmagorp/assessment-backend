@@ -3,7 +3,6 @@ module.exports = {
     getCompliment: (req, res) => {
         const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
       
-        // choose random compliment
         let randomIndex = Math.floor(Math.random() * compliments.length);
         let randomCompliment = compliments[randomIndex];
       
@@ -33,9 +32,14 @@ module.exports = {
         let motivationalPhrase = Math.floor(Math.random() * motivate.length);
         let randomMotivation = motivate[motivationalPhrase];
       
-        res.status(200).send(randomFlip);
+        res.status(200).send(randomMotivation);
 },
-
+    goalBtn: (req, res) => {
+       
+      console.log(req.body)
+      res.status(200).send('Nice Goals!');
+},
+    
 
 }
 
